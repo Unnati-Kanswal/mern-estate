@@ -18,7 +18,7 @@ import {
   signOutUserStart,
 } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
-import Listing from "../../../API/models/listing.model";
+// import Listing from "../../../API/models/listing.model";
 
 function Profile() {
   const fileRef = useRef(null);
@@ -276,7 +276,9 @@ function Profile() {
                 >
                   Delete
                 </button>
-                <button className="text-green-700 uppercase">Edit</button>
+                <Link to={`/update-listing/${listing._id}`}>
+                  <button className="text-green-700 uppercase">Edit</button>
+                </Link>
               </div>
             </div>
           ))}
